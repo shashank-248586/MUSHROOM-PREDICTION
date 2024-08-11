@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        input[type = text]{
+            height: 50px;
+            background-color: rgb(233, 233, 163);
+            background-position: 10px 10px;
+            box-sizing:border-box;
+            margin: 4px 2px;
+            text-align: center;
+            font-size: x-large;
+
+}
+        p{
+            font-size: x-large;
+            margin:0% ;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(80, 43, 226);
+        }
+        #head{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+            
+        }
+        #inmid{
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+        }
+     </style>
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(186, 193, 247); margin: 0%; border: 0%;">
+    <div id="lkj">
+        <div id="head"><h1 style="color: brown;">MUSHROOM CLASSIFICATION</h1></div>
+        <form method="get" action="{{ url_for('handel_get') }}">
+            <p>Cap-shape: BELL=b CONICAL=c CONVEX=x FLAT=f KNOBBED=k SUNKEN=s</p>
+            <div id="inmid"><input type="text" name="cap-shape" placeholder="cap-shape"><br></div>
+            <p>Cap-surface: FIBROUS=f GROOVES=g SCALY=y SMOOTH=s
+            </p>
+            <div id="inmid"><input type="text" name="cap-surface" placeholder="cap-surface"><br></div>
+            <p>Cap-color: BROWN=n BUFF=b CINNAMON=c GRAY=g GREEN=r PINK=p PURPLE=u RED=e WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="cap-color" placeholder="cap-color"><br></div>
+            
+            <p>Odor: ALMOND=a ANISE=l CREOSOT=c FISHY=y FOUL=f MUSTY=m NONE=n PUNGENT=p SPICY=s</p>
+            <div id="inmid"><input type="text" name="odor" placeholder="odor"><br></div>
+            <p>Gill-attachment: ATTACHED=a FREE=f
+            </p>
+            <div id="inmid"><input type="text" name="gill-attachment" placeholder="gill-attachment"><br></div>
+            <p>Gill-spacing: CLOSE=c CROWED=w
+            </p>
+            <div id="inmid"><input type="text" name="gill-spacing" placeholder="gill-spacing"><br></div>
+            <p>Gill-size: BOARD=b NARROW=n
+            </p>
+            <div id="inmid"><input type="text" name="gill-size" placeholder="gill-size"><br></div>
+            <p>Gill-color: BLACK=k BROWN=n BUFF=b CHOCOLATE=h GRAY=g GREEN=r ORANGE=o PINK=p PURPLE=u RED=e WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="gill-color" placeholder="gill-color"><br></div>
+            <p>Stalk-shape: ENLARGING=e,TAPERING=t
+            </p>
+            <div id="inmid"><input type="text" name="stalk-shape" placeholder="stalk-shape"><br></div>
+            <p>Stalk-root: BULBOUS=b CLUB=c EQUAL=e ROOTED=r MISSING=?
+            </p>
+            <div id="inmid"><input type="text" name="stalk-root" placeholder="stalk-root"><br></div>
+            <p>Stalk-surface-above-ring: FIBROUS=f SCALY=y SILKY=k SMOOTH=s
+            </p>
+            <div id="inmid"><input type="text" name="stalk-surface-above-ring" placeholder="stalk-surface-above-ring"><br></div>
+            <p>Stalk-surface-below-ring: FIBROUS=f SCALY=y SILKY=k SMOOTH=s
+            </p>
+            <div id="inmid"><input type="text" name="stalk-surface-below-ring" placeholder="stalk-surface-below-ring"><br></div>
+            <p>Stalk-color-above-ring: BROWN=n BUFF=b CINNAMON=c GRAY=g ORANGE=o PINK=p RED=e WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="stalk-color-above-ring" placeholder="stalk-color-above-ring"><br></div>
+            <p>stalk-color-below-ring: brown=n BUFF=b CINNAMON=c GRAY=g ORANGE=o PINK=p RED=e WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="stalk-color-below-ring" placeholder="stalk-color-below-ring"><br></div>
+            <p>Veil-type: PARTIAL=p
+            </p>
+            <div id="inmid"><input type="text" name="veil-type" placeholder="veil-type"><br></div>
+            <p>Veil-color: BROWN=n ORANGE=o WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="veil-color" placeholder="veil-color"><br></div>
+            <p>Ring-type: EVANESCENT=e FLARING=f LARGE=l NONE=n PENDANT=p
+            </p>
+            
+            <div id="inmid"><input type="text" name="ring-type" placeholder="ring-type"><br></div>
+            <p>Spore-print-color: BLACK=k BROWN=n BUFF=b CHOCOLATE=h GREEN=r ORANGE=o PURPLE=u WHITE=w YELLOW=y
+            </p>
+            <div id="inmid"><input type="text" name="spore-print-color" placeholder="spore-print-color"><br></div>
+            <p>Population: ABUNDANT=a CLUSTERED=c NUMEROUS=n SCATTERED=s SEVERAL=v SOLITARY=y
+            </p>
+            <div id="inmid"><input type="text" name="population" placeholder="population"><br></div>
+            <p>Habitat: GRESSES=g LEAVES=l MEADOW=m PATHS=p URBAN=u WASTE=w WOODS=d</p>
+            <div id="inmid"><input type="text" name="habitat" placeholder="habitat"><br></div>
+            <p>Bruises: BRUISES=t,NO=f</p>
+            <div id="inmid"><input type="text" name="bruises" placeholder="bruises"><br></div>
+           
+            
+            <p>Ring-number: NONE=n ONE=o TWO=t</p>
+            <div id="inmid"><input type="text" name="ring-number" placeholder="ring-number"><br></div>
+            
+            
+    </div>
+    <div id="asd" style="display:flex; height: 50px; align-items: center; justify-content: center;"><button type="submit" style="height: 50px; width: 300px; background-color: rgb(218,195,19); margin: 4px 4px; font-size: xx-large; ">PREDICT</button></div>
+</body>
+</html>
